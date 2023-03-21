@@ -8,15 +8,13 @@
     <title>TaskList</title>
 </head>
 <body>
+    <script>var count=1;</script>
     <div>
         <table id="taskList">
             <tr>
                 <th>status</th>
                 <th>task</th>
-            </tr>
-            <tr>
-                <td><br></td>
-                <td>this is a task</td>
+                <th>remove</th>
             </tr>
         </table>
         <p></p>
@@ -28,10 +26,33 @@
             var table = document.getElementById("taskList");
             var row = table.insertRow(-1);
             var cell1 = row.insertCell(0);
+            cell1.id="statuscell"+count;
+            cell1.className="statuscell";
+            cell1. addEventListener("click",function(){cycleColour(cell1.id)});
             var cell2 = row.insertCell(1);
-            cell1.innerHTML = "<br>";
+            cell2.id="taskCell"+count;
+            var cell3 = row.insertCell(2);
+            cell3. addEventListener("click",function(){cellRemover(count-1)});
+            cell3.id="removeCell"+count;
+            cell3.className="remover";
+            cell1.innerHTML = "";
             cell2.innerHTML = "<div contenteditable='true'>Add Task</div>";
+            cell3.innerHTML = "X"
+            count = count+1;
         }
+
+        function cycleColour(id){
+            
+            var whereSwap = document.getElementById(id);
+            whereSwap.style.backgroundColor ="red"; 
+
+        }
+
+        function cellRemover(row){
+            document.getElementById("addButton").innerHTML = row;
+            document.getElementById("taskList").deleteRow(row);
+        }
+
     </script>
 </body>
 </html>

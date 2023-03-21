@@ -3,24 +3,25 @@ body {
 }
 
 table {
-    border: 1px solid rgb(124, 143, 145);
+    border: 1px solid rgb(0, 0, 0);
     padding: 30px;
     border-collapse: collapse;
   width: 100%;
+  
 }
 
 tr:nth-child(even){
     background-color: rgb(237, 237, 241);
+    width: 3%;
 }
 
 td:nth-child(odd){
-    height: 3%;
     width: 3%;
 }
 
 td, th {
     border: 1px solid #c6c5ce;
-    text-align: left;
+    text-align: center;
     
 }
 #addButton{
@@ -33,4 +34,12 @@ td, th {
     width: 25%;
     font-size: larger;
     margin: auto;
+}
+.statusShow{
+    width: 100%;
+    background-color: aquamarine;
+}
+.remover{
+    background-color: red;
+    text-align: center;
 }
