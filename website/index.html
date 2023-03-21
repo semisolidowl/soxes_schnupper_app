@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,20 +9,29 @@
 </head>
 <body>
     <div>
-        <table>
+        <table id="taskList">
             <tr>
                 <th>status</th>
                 <th>task</th>
             </tr>
             <tr>
-                <td></td>
+                <td><br></td>
                 <td>this is a task</td>
             </tr>
-            <tr>
-                <td></td>
-                <td id="addButton">Add</td>
-            </tr>
         </table>
+        <p></p>
+        <div id="addButton" onclick="addTask()">Add</div>
     </div>
+
+    <script>
+        function addTask() {
+            var table = document.getElementById("taskList");
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = "<br>";
+            cell2.innerHTML = "<div contenteditable='true'>Add Task</div>";
+        }
+    </script>
 </body>
 </html>
