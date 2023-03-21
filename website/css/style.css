@@ -3,15 +3,28 @@ body {
 }
 
 table {
-    background-color: rgb(196, 225, 228);
-    border: 2px solid rgb(124, 143, 145);;
+    border: 2px solid rgb(124, 143, 145);
     padding: 30px;
     border-collapse: collapse;
   width: 100%;
 }
 
+tr:nth-child(even){
+    background-color: rgb(237, 237, 241);
+}
+
+td:nth-child(odd){
+    height: 3%;
+    width: 3%;
+}
+
 td, th {
     border: 1px solid #c6c5ce;
     text-align: left;
-    padding: 8px;
-  }
+    
+}
+
+#addButton{
+    text-align: center;
+background-color: yellowgreen;
+}
