@@ -35,9 +35,9 @@ td, th {
     font-size: larger;
     margin: auto;
 }
-.statusShow{
+.statuscell{
     width: 100%;
-    background-color: aquamarine;
+    background-color:crimson
 }
 .remover{
     background-color: red;

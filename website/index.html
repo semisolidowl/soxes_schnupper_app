@@ -25,16 +25,21 @@
         function addTask() {
             var table = document.getElementById("taskList");
             var row = table.insertRow(-1);
+            row.id="row"+count;
+
             var cell1 = row.insertCell(0);
             cell1.id="statuscell"+count;
             cell1.className="statuscell";
             cell1. addEventListener("click",function(){cycleColour(cell1.id)});
+
             var cell2 = row.insertCell(1);
             cell2.id="taskCell"+count;
+            
             var cell3 = row.insertCell(2);
-            cell3. addEventListener("click",function(){cellRemover(count-1)});
+            cell3. addEventListener("click",function(){cellRemover(row.id)});
             cell3.id="removeCell"+count;
             cell3.className="remover";
+
             cell1.innerHTML = "";
             cell2.innerHTML = "<div contenteditable='true'>Add Task</div>";
             cell3.innerHTML = "X"
@@ -44,13 +49,15 @@
         function cycleColour(id){
             
             var whereSwap = document.getElementById(id);
-            whereSwap.style.backgroundColor ="red"; 
+            whereSwap.style.backgroundColor ="Green"; 
 
         }
 
         function cellRemover(row){
             document.getElementById("addButton").innerHTML = row;
-            document.getElementById("taskList").deleteRow(row);
+            document.getElementById(row).deletecell(0);
+            document.getElementById(row).deletecell(1);
+            document.getElementById(row).deletecell(2);
         }
 
     </script>
