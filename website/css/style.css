@@ -35,11 +35,11 @@ td, th {
     font-size: larger;
     margin: auto;
 }
-.statuscell{
+.statuscellR{
     width: 100%;
-    background-color:crimson
+    background-color:red;
 }
 .remover{
-    background-color: red;
+    background-color: crimson;
     text-align: center;
 }
